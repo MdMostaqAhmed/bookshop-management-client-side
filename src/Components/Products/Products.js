@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Products.css'
 
 const Products = () => {
@@ -20,14 +21,16 @@ const Products = () => {
                         </div>
                         <div className='ms-2 mt-2'>
                             <h3>Book Name: {item.name}</h3>
-                            <hr class="style1"></hr>
+                            <hr></hr>
                             <h5><strong> Price: {item.price}</strong></h5>
-                            <hr class="style1"></hr>
+                            <hr ></hr>
                             <spin><strong>Supplier: {item.supplier}</strong></spin> <br />
-                            <hr class="style1"></hr>
+                            <hr ></hr>
                             <spin><strong>Available: {item.available} </strong></spin> <br />
-                            <hr class="style1"></hr>
+                            <hr ></hr>
                             <spin><strong>Sold: {item.sold}</strong></spin> <br />
+                            <hr></hr>
+                            <Link><button className='btn btn-primary'>Update</button></Link>
                         </div>
                     </div>)
                 }
