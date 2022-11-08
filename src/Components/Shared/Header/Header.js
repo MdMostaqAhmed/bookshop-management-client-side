@@ -34,7 +34,6 @@ const Header = () => {
                                     Login
                                 </Nav.Link>
                                 )
-
                         }
                     </Nav>
                 </Container>
