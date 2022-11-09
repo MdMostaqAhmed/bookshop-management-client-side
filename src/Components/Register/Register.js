@@ -34,17 +34,13 @@ const Register = () => {
     }
 
     return (
-        <div className='w-50 mx-auto mt-3'>
-
-            <h1>Please Register</h1>
-
-
-
-            <div className="">
+        <div className='w-50 mx-auto mt-3 login'>
+            <h2>Please Register</h2>
+            <div >
 
                 <input className='mt-3' type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> <br />
                 <input className='mt-2' type="password" value={password} onChange={(e) => setPassword(e.target.value)} /> <br />
-                <button className='mt-2' onClick={() => createUserWithEmailAndPassword(email, password)}>
+                <button className='mt-2 btn btn-primary' onClick={() => createUserWithEmailAndPassword(email, password)}>
                     Register
                 </button>
             </div>

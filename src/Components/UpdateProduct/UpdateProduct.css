@@ -1,0 +1,8 @@
+.updateHeading {
+  text-align: center;
+}
+
+.updateProducts div {
+  display: flex;
+  flex-wrap: wrap;
+}

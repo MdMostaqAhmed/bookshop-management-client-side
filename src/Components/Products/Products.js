@@ -24,11 +24,11 @@ const Products = () => {
                             <hr></hr>
                             <h5><strong> Price: {item.price}</strong></h5>
                             <hr ></hr>
-                            <spin><strong>Supplier: {item.supplier}</strong></spin> <br />
+                            <span><strong>Supplier: {item.supplier}</strong></span> <br />
                             <hr ></hr>
-                            <spin><strong>Available: {item.available} </strong></spin> <br />
+                            <span><strong>Available: {item.available} </strong></span> <br />
                             <hr ></hr>
-                            <spin><strong>Sold: {item.sold}</strong></spin> <br />
+                            <span><strong>Sold: {item.sold}</strong></span> <br />
                             <hr></hr>
                             <Link><button className='btn btn-primary'>Update</button></Link>
                         </div>

@@ -31,7 +31,7 @@ const Login = () => {
 
     return (
 
-        <div className='container'>
+        <div className='container w-50 mx-auto login'>
             <h1>Login</h1>
             <form onSubmit={() => signInWithEmailAndPassword(email, password)}>
                 <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> <br />
@@ -39,7 +39,7 @@ const Login = () => {
                 <input className='btn btn-primary mt-2' type="submit" value="Sign In"></input>
             </form>
 
-            <button className='btn btn-primary my-2' onClick={() => signInWithEmailAndPassword(email, password)}> Sign In </button>
+
 
             <p>Are You New ?{"  "} <Link to='/register' className='form-link'>Please Register</Link></p>
 
