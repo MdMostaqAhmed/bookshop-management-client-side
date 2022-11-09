@@ -13,6 +13,7 @@ import UpdateProduct from './Components/UpdateProduct/UpdateProduct';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import SocialLogin from './Components/SocialLogin/SocialLogin';
+import Update from './Components/Update/Update';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
 
         <Route path='/add' element={<AddProduct></AddProduct>}></Route>
         <Route path='/update' element={<UpdateProduct></UpdateProduct>}></Route>
+        <Route path='/updateBook/:id' element={<Update></Update>}></Route>
+
 
 
         <Route path='/login' element={<Login></Login>}></Route>

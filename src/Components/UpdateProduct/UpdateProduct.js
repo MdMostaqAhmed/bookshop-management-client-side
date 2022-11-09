@@ -44,7 +44,10 @@ const UpdateProduct = () => {
                         <> </>
                         <button className='btn btn-primary' onClick={() => handleBookDelete(item._id)}>Delete</button>
                         <> </>
-                        <button className='btn btn-primary'>Edit</button>
+                        <Link to={`/updateBook/${item._id}`}>
+                            <button className='btn btn-primary'>Edit</button>
+                        </Link>
+
 
 
                     </div>)
