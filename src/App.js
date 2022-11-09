@@ -14,6 +14,7 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import SocialLogin from './Components/SocialLogin/SocialLogin';
 import Update from './Components/Update/Update';
+import RequireAuth from './Components/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -27,9 +28,9 @@ function App() {
         <Route path='/about' element={<AboutUs></AboutUs>}></Route>
 
 
-        <Route path='/add' element={<AddProduct></AddProduct>}></Route>
-        <Route path='/update' element={<UpdateProduct></UpdateProduct>}></Route>
-        <Route path='/updateBook/:id' element={<Update></Update>}></Route>
+        <Route path='/add' element={<RequireAuth><AddProduct></AddProduct></RequireAuth>}></Route>
+        <Route path='/update' element={<RequireAuth><UpdateProduct></UpdateProduct></RequireAuth>}></Route>
+        <Route path='/updateBook/:id' element={<RequireAuth><Update></Update></RequireAuth>}></Route>
 
 
 
