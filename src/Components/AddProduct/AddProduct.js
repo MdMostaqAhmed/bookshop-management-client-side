@@ -3,6 +3,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import auth from '../../firebase.init';
 
+
+
 const AddProduct = () => {
     const [user] = useAuthState(auth);
     const { register, handleSubmit } = useForm();
@@ -19,6 +21,8 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+                toast("Item Added");
+
             })
         event.target.reset();
 
@@ -64,14 +68,21 @@ const AddProduct = () => {
                 /> <br />
                 <input
                     className='mt-2'
+                    type="email"
+                    placeholder={user.email}
+                    value={user.email}
+                    {...register("email", { required: true })}
+                /> <br />
+                <input
+                    className='mt-2'
                     type="number"
-                    value="0"
-                    placeholder="Sold Product"
+
+                    placeholder="Sold Product Number"
                     {...register("sold", { required: true })}
                 /> <br />
 
 
-
+                <ToastContainer />
 
                 <input type="submit" className="btn btn-primary mt-2" value="Add Now" />
             </form>

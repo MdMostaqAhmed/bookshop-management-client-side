@@ -15,6 +15,9 @@ import Register from './Components/Register/Register';
 import SocialLogin from './Components/SocialLogin/SocialLogin';
 import Update from './Components/Update/Update';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
+import MyItems from './Components/MyItems/MyItems';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -31,6 +34,7 @@ function App() {
         <Route path='/add' element={<RequireAuth><AddProduct></AddProduct></RequireAuth>}></Route>
         <Route path='/update' element={<RequireAuth><UpdateProduct></UpdateProduct></RequireAuth>}></Route>
         <Route path='/updateBook/:id' element={<RequireAuth><Update></Update></RequireAuth>}></Route>
+        <Route path='/myItems' element={<RequireAuth><MyItems></MyItems></RequireAuth>}></Route>
 
 
 
