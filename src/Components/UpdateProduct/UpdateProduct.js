@@ -33,7 +33,7 @@ const UpdateProduct = () => {
     }
 
     return (
-        <div className=''>
+        <div className='w-50 mx-auto'>
             <h2 className='mt-3 mb-5 updateHeading'>Update Product</h2>
             <div className='container'>
                 {
