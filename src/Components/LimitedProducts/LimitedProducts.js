@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 const LimitedProducts = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        const url = 'http://localhost:5000/limitemBooks';
+        const url = 'http://localhost:5000/limitedBooks';
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
     return (
         <div className='container'>
-            <h1 className='w-50 mx-auto'>Available Products</h1>
+            <h1 className='d-flex justify-content-center mt-5 mb-4'>Available Products</h1>
             <div className='items-container'>
                 {
                     items.map((item, index) => <div key={index} className='item'>
