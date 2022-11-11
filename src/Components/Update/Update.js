@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import './Update.css'
 
 const Update = () => {
@@ -31,7 +32,7 @@ const Update = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                alert("Book added successfully")
+                toast("Update successfully")
             })
     }
 
@@ -54,9 +55,3 @@ const Update = () => {
 export default Update;
 
 
-// name
-// img
-// price
-// supplier
-// available
-// sold

@@ -17,6 +17,8 @@ import Update from './Components/Update/Update';
 import RequireAuth from './Components/RequireAuth/RequireAuth';
 import MyItems from './Components/MyItems/MyItems';
 import ManageItem from './Components/ManageItem/ManageItem';
+import { ToastContainer } from 'react-toastify';
+import LimitedProducts from './Components/LimitedProducts/LimitedProducts';
 
 
 function App() {
@@ -26,6 +28,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/limitedProducts' element={<LimitedProducts></LimitedProducts>}></Route>
         <Route path='/products' element={<Products></Products>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/about' element={<AboutUs></AboutUs>}></Route>
@@ -47,6 +50,7 @@ function App() {
 
       </Routes>
       {/* <Footer></Footer> */}
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
