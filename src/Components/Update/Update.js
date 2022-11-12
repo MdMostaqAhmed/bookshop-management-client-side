@@ -15,11 +15,12 @@ const Update = () => {
         event.preventDefault();
         const name = event.target.name.value
         const img = event.target.img.value
+        const description = event.target.description.value
         const price = event.target.price.value
         const supplier = event.target.supplier.value
         const available = event.target.available.value
         const sold = event.target.sold.value
-        const book = { name, img, price, supplier, available, sold }
+        const book = { name, img, description, price, supplier, available, sold }
 
         const url = `http://localhost:5000/book/${id}`;
         fetch(url, {
@@ -38,14 +39,21 @@ const Update = () => {
 
     return (
         <div className='container mt-3 updateBook'>
-            <h2>Update or Edit: {book.name}</h2>
+            <div className='text-align-center'>
+                <h2 >Update Book</h2> <br />
+                <img style={{ width: "200px" }} src={book.img} alt="" /> <br />
+                <h4>{book.name}</h4>
+
+            </div>
+
             <form onSubmit={handleUpdateBook}>
-                <input className='mt-2' type="text" name="name" placeholder='Book Name' required /> <br />
-                <input className='mt-2' type="text" name="img" placeholder='URL' required /> <br />
-                <input className='mt-2' type="number" name="price" placeholder='Book Price' required /> <br />
-                <input className='mt-2' type="text" name="supplier" placeholder='Supplier Name' required /> <br />
-                <input className='mt-2' type="number" name="available" placeholder='Available Product Number' required /> <br />
-                <input className='mt-2' type="number" name="sold" placeholder='Sold Product Number' required /> <br />
+                <input className='mt-2' type="text" name="name" placeholder='Book Name' required autoComplete='off' /> <br />
+                <input className='mt-2' type="text" name="img" placeholder='URL' required autoComplete='off' /> <br />
+                <input className='mt-2' type="text" name="description" placeholder='Description' required autoComplete='off' /> <br />
+                <input className='mt-2' type="number" name="price" placeholder='Book Price' required autoComplete='off' /> <br />
+                <input className='mt-2' type="text" name="supplier" placeholder='Supplier Name' required autoComplete='off' /> <br />
+                <input className='mt-2' type="number" name="available" placeholder='Available Product Number' required autoComplete='off' /> <br />
+                <input className='mt-2' type="number" name="sold" placeholder='Sold Product Number' required autoComplete='off' /> <br />
                 <input className='btn btn-primary mt-2' type="submit" value="Update" />
             </form>
         </div>

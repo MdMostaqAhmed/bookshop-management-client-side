@@ -1,0 +1,58 @@
+[
+  {
+    "name": "The Usborne Book of World History",
+    "img": "https://i.ibb.co/sCPRFvB/1.jpg",
+    "description": "Presents an introduction to world history, from prehistoric peoples through ancient civilizations to the early twentieth century, focusing on the varying cultures, art, and daily life of civilizations throughout history.",
+    "price": "$ 25",
+    "supplier": "Penguin Random House",
+    "available": "200",
+    "sold": "100"
+  },
+  {
+    "name": "CHILDREN WORLD HISTORY",
+    "img": "https://i.ibb.co/9rS35Wh/2.jpg",
+    "description": "Introducing an updated volume of History Year by Year - a timeline of world history that joins the dots of history by putting key historic events across the world on one timeline for children, including everything from prehistoric people, to world wars, humans on the moon, and so much more! ",
+    "price": "90",
+    "supplier": "The Hachette Book Group",
+    "available": "121",
+    "sold": "34"
+  },
+  {
+    "name": "Weird & Wacks History Book Box",
+    "img": "https://i.ibb.co/JmgnqPK/3.jpg",
+    "description": "This title explores the worlds of fact and fantasy in eight books. Learn through step-by-step hands-on projects that make history and mythology come alive.",
+    "price": "$ 20",
+    "supplier": "Simon & Schuster",
+    "available": "298",
+    "sold": "202"
+  },
+
+  {
+    "name": "A History Of France",
+    "img": "https://i.ibb.co/QDQ8kbj/4.jpg",
+    "description": "Beginning with Julius Caesars conquest of Gaul in the first century BC, this study of French history comprises a cast of legendary characters―Charlemagne, Louis XIV, Napoleon, Joan of Arc and Marie Antionette, to name a few―as Norwich chronicles Frances often violent, always fascinating history. From the French Revolution",
+    "price": "$ 25",
+    "supplier": "The Hachette Book Group",
+    "available": "400",
+    "sold": "280"
+  },
+
+  {
+    "name": "Glencoe World History",
+    "img": "https://i.ibb.co/Zd3VVWh/5.jpg",
+    "description": "Glencoe World History is a full-survey world history program authored by a world-renowned historian, Jackson Spielvogel, and the National Geographic Society. Experiencing world history and understanding its relevance to the modern world is the goal of this program.",
+    "price": "$ 35",
+    "supplier": "Scholastic",
+    "available": "300",
+    "sold": "160"
+  },
+  {
+    "name": "Black History Matters",
+    "img": "https://i.ibb.co/7K9Brp9/6.jpg",
+    "description": "Black history is an integral part of world history. From the injustices of the past and present, we can learn and be inspired to make the world we live in more fair, equal and just.Black History Matters chronicles thousands of years of Black history, from African kingdoms, to slavery, apartheid, the battle for civil rights, the global Black Lives Matter protests of 2020 and much more.",
+    "price": "$ 30",
+    "supplier": "Workman Publishing Company",
+    "available": "404",
+    "sold": "190"
+  }
+]

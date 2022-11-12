@@ -51,6 +51,13 @@ const AddProduct = () => {
 
                 <input
                     className='mt-2'
+                    type="text"
+                    placeholder="Description"
+                    {...register("description", { required: true })}
+                /> <br />
+
+                <input
+                    className='mt-2'
                     type="number"
                     placeholder="Product Price"
                     {...register("price", { required: true })}

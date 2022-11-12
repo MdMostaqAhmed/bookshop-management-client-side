@@ -13,8 +13,8 @@ const Products = () => {
 
 
     return (
-        <div className='container'>
-            <h1 className='w-50 mx-auto'>Available Products</h1>
+        <div className='container mt-5'>
+            <h1 className='d-flex justify-content-center mb-3'>Available Products</h1>
             <div className='items-container'>
                 {
                     items.map((item, index) => <div key={index} className='item'>
@@ -23,6 +23,8 @@ const Products = () => {
                         </div>
                         <div className='ms-2 mt-2'>
                             <h3>Book Name: {item.name}</h3>
+                            <hr></hr>
+                            <span><strong>Description:</strong> {(item.description).slice(0, 190)}</span>
                             <hr></hr>
                             <h5><strong> Price: {item.price}</strong></h5>
                             <hr ></hr>

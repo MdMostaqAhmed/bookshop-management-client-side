@@ -20,6 +20,7 @@ import ManageItem from './Components/ManageItem/ManageItem';
 import { ToastContainer } from 'react-toastify';
 import LimitedProducts from './Components/LimitedProducts/LimitedProducts';
 import Blog from './Components/Blog/Blog';
+import PageNotFound from './Components/Shared/404/PageNotFound';
 
 
 function App() {
@@ -46,6 +47,9 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/socialLogin' element={<SocialLogin></SocialLogin>}></Route>
+        <Route path='/*' element={<PageNotFound></PageNotFound>}></Route>
+
+
 
 
 
@@ -57,3 +61,5 @@ function App() {
 }
 
 export default App;
+
+
