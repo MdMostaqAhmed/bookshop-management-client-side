@@ -30,16 +30,15 @@ const Login = () => {
 
     return (
 
-        <div className='container w-50 mx-auto login'>
+        <div className='container w-50 mx-auto login viewport'>
             <h1>Login</h1>
             <form onSubmit={() => signInWithEmailAndPassword(email, password)}>
-                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> <br />
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} /> <br />
+                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete='off' /> <br />
+                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required autoComplete='off' /> <br />
                 <input className='btn btn-primary mt-2' type="submit" value="Sign In"></input>
             </form>
 
-
-
+            <p>Forget Password? {"  "} <Link to='/register' className='form-link'>Reset Password</Link></p>
             <p>Are You New ?{"  "} <Link to='/register' className='form-link'>Please Register</Link></p>
 
             <SocialLogin></SocialLogin>

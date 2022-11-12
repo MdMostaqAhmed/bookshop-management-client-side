@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Form } from 'react-router-dom';
+import './Register.css';
 import auth from '../../firebase.init';
+
 
 const Register = () => {
 
@@ -13,7 +15,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     if (error) {
         return (
@@ -27,14 +29,17 @@ const Register = () => {
     }
     if (user) {
         return (
-            <div>
+            <div className='w-50 mx-auto'>
                 <p>Registered User: {user.user.email}</p>
+                <p>Please Check Your Email and Verify Your Email</p>
             </div>
         );
-    }
+    };
+
+
 
     return (
-        <div className='w-50 mx-auto mt-3 login'>
+        <div className='w-50 mx-auto mt-3 login viewport'>
             <h2>Please Register</h2>
             <div >
 
@@ -44,6 +49,8 @@ const Register = () => {
                     Register
                 </button>
             </div>
+
+
 
         </div>
     );

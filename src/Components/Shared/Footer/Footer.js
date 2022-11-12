@@ -32,7 +32,7 @@ const Footer = () => {
                 <h4>Office Hours</h4>
                 <span>
                     Monday To Friday : 8.00 AM - 8.00 PM <br />
-                    Satuday Sunday : 7.30 AM - 9.30 PM
+                    Saturday To Sunday : 7.30 AM - 9.30 PM
                 </span>
 
             </div>
