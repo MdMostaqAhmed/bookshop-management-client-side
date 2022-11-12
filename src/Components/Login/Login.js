@@ -38,7 +38,7 @@ const Login = () => {
                 <input className='btn btn-primary mt-2' type="submit" value="Sign In"></input>
             </form>
 
-            <p>Forget Password? {"  "} <Link to='/register' className='form-link'>Reset Password</Link></p>
+            <p>Forget Password? {"  "} <Link to='/passwordReset' className='form-link'>Reset Password</Link></p>
             <p>Are You New ?{"  "} <Link to='/register' className='form-link'>Please Register</Link></p>
 
             <SocialLogin></SocialLogin>

@@ -21,6 +21,7 @@ import { ToastContainer } from 'react-toastify';
 import LimitedProducts from './Components/LimitedProducts/LimitedProducts';
 import Blog from './Components/Blog/Blog';
 import PageNotFound from './Components/Shared/404/PageNotFound';
+import PasswordReset from './Components/PasswordReset/PasswordReset';
 
 
 function App() {
@@ -47,6 +48,8 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/socialLogin' element={<SocialLogin></SocialLogin>}></Route>
+        <Route path='/passwordReset' element={<PasswordReset></PasswordReset>}></Route>
+
         <Route path='/*' element={<PageNotFound></PageNotFound>}></Route>
 
 
