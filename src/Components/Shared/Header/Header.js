@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 
 const Header = () => {
     const [user] = useAuthState(auth);
+
     const handleSignOut = () => {
         signOut(auth);
     };
@@ -27,6 +28,7 @@ const Header = () => {
                         {user ? <Nav.Link as={Link} to="/update">Update Product</Nav.Link> : ''}
                         {user ? <Nav.Link as={Link} to="/add">Add Product</Nav.Link> : ''}
                         {user ? <Nav.Link as={Link} to="/myItems">My Items</Nav.Link> : ''}
+                        {user ? <span className='mt-2'>{user.displayName}</span> : ''}
                         {
                             user ?
                                 (<button onClick={handleSignOut} className="btn btn-link text-white text-decoration-none" >

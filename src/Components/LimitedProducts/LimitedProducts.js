@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 
 const LimitedProducts = () => {
     const [items, setItems] = useState([]);
@@ -9,10 +10,12 @@ const LimitedProducts = () => {
             .then(res => res.json())
             .then(data => setItems(data))
     }, [])
+
     return (
         <div className='container'>
             <h1 className='d-flex justify-content-center mt-5 mb-4'>Available Products</h1>
             <div className='items-container'>
+
                 {
                     items.map((item, index) => <div key={index} className='item'>
                         <div className='bookImage'>
