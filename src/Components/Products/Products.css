@@ -37,3 +37,15 @@
   display: flex;
   justify-content: center;
 }
+
+.pagination button {
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid lightsalmon;
+  width: 40px;
+}
+
+.pagination .selected {
+  background-color: darkcyan;
+  color: white;
+}

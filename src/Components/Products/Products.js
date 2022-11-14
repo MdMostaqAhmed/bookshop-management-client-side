@@ -4,12 +4,28 @@ import './Products.css'
 
 const Products = () => {
     const [items, setItems] = useState([]);
+    const [pageCount, setPageCount] = useState(0);
+    const [page, setPage] = useState(0);
+    const [size, setSize] = useState(6);
     useEffect(() => {
-        const url = 'http://localhost:5000/books';
+        const url = `http://localhost:5000/books?page=${page}&size=${size}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data))
+    }, [page, size])
+
+    useEffect(() => {
+        const url = `http://localhost:5000/bookCount`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                const count = data.count;
+                const pages = Math.ceil(count / 6);
+                setPageCount(pages);
+            })
     }, [])
+
+    console.log(page, size)
 
 
     return (
@@ -41,6 +57,23 @@ const Products = () => {
                         </div>
                     </div>)
                 }
+            </div>
+
+            <div className="pagination mt-3 d-flex justify-content-center">
+                {[...Array(pageCount).keys()].map((number, index) => (
+                    <button
+                        key={index}
+                        className={page === number ? "selected" : ""}
+                        onClick={() => setPage(number)}
+                    >
+                        {number + 1}
+                    </button>))}
+                <select onChange={e => setSize(e.target.value)}>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                </select>
+
             </div>
         </div>
     );
