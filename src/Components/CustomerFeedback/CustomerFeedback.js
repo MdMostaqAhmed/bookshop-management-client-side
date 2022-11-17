@@ -10,26 +10,21 @@ const CustomerFeedback = () => {
                     <div className='customerImage'>
                         <img src="https://i.ibb.co/Sf0Dykz/images-1.jpg" alt="" />
                     </div>
-                    <p>I purchased an iMac-2022 for the work place. It was delivered on time and very quickly from the point of ordering.The product quality is very good</p>
+                    <p>When you work in a warehouse you will spend a lot of time working with other people. The best thing is working together to complete tasks more quickly and effectively. It can be very rewarding to achieve something with another person.</p>
                 </div>
                 <div className='customer item'>
                     <div className='customerImage'>
                         <img src="https://i.ibb.co/ypVFftM/images-2.jpg" alt="" />
                     </div>
-                    <p>I purchased an iMac-2022 for the work place. It was delivered on time and very quickly from the point of ordering.The product quality is very good</p>
+                    <p>Warehouses need to make up orders, move and store items and keep records of inventory. Tasks often involve sorting, assembly, packing and labelling. There is also a lot of physical work that needs to be done. Items need to be loaded onto trucks or put onto pallets and stacked safely in the right place. </p>
                 </div>
                 <div className='customer item'>
                     <div className='customerImage'>
                         <img src="https://i.ibb.co/cCtdJ10/images-3.jpg" alt="" />
                     </div>
-                    <p>I purchased an iMac-2022 for the work place. It was delivered on time and very quickly from the point of ordering.The product quality is very good</p>
+                    <p>It can also feel good just to be active when you’re working. According to Nicholas, it is good to be “moving around not just sitting on my butt all day.” In some jobs, you have to sit down all day, but you have to move around a lot when working in a warehouse.</p>
                 </div>
-                <div className='customer item'>
-                    <div className='customerImage'>
-                        <img src="https://i.ibb.co/g3R8mdx/images-4.jpg" alt="" />
-                    </div>
-                    <p>I purchased an iMac-2022 for the work place. It was delivered on time and very quickly from the point of ordering.The product quality is very good</p>
-                </div>
+
             </div>
         </div>
     );

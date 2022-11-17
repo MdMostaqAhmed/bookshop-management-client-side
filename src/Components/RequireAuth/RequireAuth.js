@@ -24,6 +24,7 @@ const RequireAuth = ({ children }) => {
             <div className="text-center mt-5">
                 <h3 className="text-danger">Your Email is not verified</h3>
                 <h5 className="text-success">Please Verify your email address </h5>
+                <h6 className="text-success">Please Click Sign out Button, Verify Your Email and Try Login</h6>
                 <button
                     className="btn btn-primary"
                     onClick={async () => {

@@ -1,8 +1,8 @@
 import React from 'react';
+import CustomerFeedback from '../../CustomerFeedback/CustomerFeedback';
 import LimitedProducts from '../../LimitedProducts/LimitedProducts';
-import Products from '../../Products/Products';
 import Banner from '../Banner/Banner';
-import CustomerFeedback from '../CustomerFeedback';
+
 
 const Home = () => {
     return (

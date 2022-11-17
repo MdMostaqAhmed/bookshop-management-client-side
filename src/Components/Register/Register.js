@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import React, { useRef, useState } from 'react';
+import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Form } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Register.css';
 import auth from '../../firebase.init';
+import { async } from '@firebase/util';
+import { toast } from 'react-toastify';
+import Loading from '../Loading/Loading';
 
 
 const Register = () => {
 
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/login";
     const [
         createUserWithEmailAndPassword,
         user,
@@ -25,17 +31,27 @@ const Register = () => {
         );
     }
     if (loading) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>;
     }
     if (user) {
         return (
             <div className='w-50 mx-auto'>
-                <p>Registered User: {user.user.email}</p>
+                <p>Registered User: {user?.user.email}</p>
                 <p>Please Check Your Email and Verify Your Email</p>
             </div>
         );
     };
 
+    const handleSubmit = async event => {
+        event.preventDefault();
+        const email = emailRef.current.value;
+        const password = passwordRef.current.value;
+        await createUserWithEmailAndPassword(email, password);
+        navigate(from, { replace: true });
+        alert("Please Check Your Email and Verify")
+        toast("Verification Link Send To Your Email")
+
+    }
 
 
     return (
@@ -43,11 +59,25 @@ const Register = () => {
             <h2>Please Register</h2>
             <div >
 
-                <input className='mt-3' type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> <br />
+                {/* <input className='mt-3' type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> <br />
                 <input className='mt-2' type="password" value={password} onChange={(e) => setPassword(e.target.value)} /> <br />
                 <button className='mt-2 btn btn-primary' onClick={() => createUserWithEmailAndPassword(email, password)}>
                     Register
-                </button>
+                </button> */}
+
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                    </Form.Group>
+                    <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
+                        Register
+                    </Button>
+                </Form>
+
+
             </div>
 
 
