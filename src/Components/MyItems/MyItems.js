@@ -8,12 +8,20 @@ import './MyItems.css'
 const MyItems = () => {
     const [user] = useAuthState(auth);
     const [items, setItems] = useState([]);
+
     useEffect(() => {
-        const url = `http://localhost:5000/myItem?email=${user.email}`;
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setItems(data))
-    }, [])
+        const getItems = async () => {
+            const email = user.email;
+            const url = `http://localhost:5000/myItem?email=${email}`
+            const { data } = await axios.get(url, {
+                headers: {
+                    authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                }
+            })
+            setItems(data);
+        }
+        getItems();
+    }, [user])
 
     const handleBookDelete = id => {
         const proceed = window.confirm("Are sure to Delete the Item");
