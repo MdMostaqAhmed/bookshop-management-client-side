@@ -1,9 +1,10 @@
 # BOOK SHOP Warehouse
 
-[Live Website](https://www.github.com)
+> [Live Website](https://www.github.com)
 
-[Client site code](https://www.github.com)
-[Server site code](https://www.github.com)
+> [Client site code](https://www.github.com)
+
+> [Server site code](https://www.github.com)
 
 ## This website made with
 
