@@ -25,7 +25,7 @@ const Products = () => {
             })
     }, [])
 
-    console.log(page, size)
+
 
 
     return (

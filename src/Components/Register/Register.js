@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 import { async } from '@firebase/util';
 import { toast } from 'react-toastify';
 import Loading from '../Loading/Loading';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
 const Register = () => {
@@ -72,9 +73,6 @@ const Register = () => {
         <div className='w-50 mx-auto mt-3 login viewport'>
             <h2>Please Register</h2>
             <div >
-
-
-
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
@@ -87,8 +85,7 @@ const Register = () => {
                         Register
                     </Button>
                 </Form>
-
-
+                <SocialLogin></SocialLogin>
             </div>
 
 
