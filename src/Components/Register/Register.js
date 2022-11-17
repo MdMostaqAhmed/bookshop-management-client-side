@@ -14,6 +14,7 @@ const Register = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const navigate = useNavigate();
+    const [passwordError, setPasswordError] = useState("")
     const location = useLocation();
     let from = location.state?.from?.pathname || "/login";
     const [
@@ -42,16 +43,29 @@ const Register = () => {
         );
     };
 
+
+
     const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        await createUserWithEmailAndPassword(email, password);
-        navigate(from, { replace: true });
-        alert("Please Check Your Email and Verify")
-        toast("Verification Link Send To Your Email")
 
+        console.log(password.length);
+
+        if (password.length < 6) {
+            setPasswordError("Password must be 6 characters or longer");
+            return;
+        }
+        else {
+            await createUserWithEmailAndPassword(email, password);
+            navigate(from, { replace: true });
+            alert("Please Check Your Email and Verify")
+            toast("Verification Link Send To Your Email")
+        }
     }
+
+
+
 
 
     return (
@@ -59,11 +73,7 @@ const Register = () => {
             <h2>Please Register</h2>
             <div >
 
-                {/* <input className='mt-3' type="email" value={email} onChange={(e) => setEmail(e.target.value)} /> <br />
-                <input className='mt-2' type="password" value={password} onChange={(e) => setPassword(e.target.value)} /> <br />
-                <button className='mt-2 btn btn-primary' onClick={() => createUserWithEmailAndPassword(email, password)}>
-                    Register
-                </button> */}
+
 
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -72,6 +82,7 @@ const Register = () => {
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                     </Form.Group>
+                    <p>{passwordError}</p>
                     <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
                         Register
                     </Button>
