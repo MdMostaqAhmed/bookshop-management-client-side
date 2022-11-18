@@ -12,7 +12,7 @@ const AddProduct = () => {
     const { register, handleSubmit } = useForm();
 
     const onSubmit = (data, event) => {
-        const url = `http://localhost:5000/book`;
+        const url = ` https://stormy-journey-81086.herokuapp.com/book`;
         fetch(url, {
             method: "POST",
             headers: {

@@ -8,14 +8,14 @@ const Products = () => {
     const [page, setPage] = useState(0);
     const [size, setSize] = useState(6);
     useEffect(() => {
-        const url = `http://localhost:5000/books?page=${page}&size=${size}`;
+        const url = ` https://stormy-journey-81086.herokuapp.com/books?page=${page}&size=${size}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data))
     }, [page, size])
 
     useEffect(() => {
-        const url = `http://localhost:5000/bookCount`
+        const url = ` https://stormy-journey-81086.herokuapp.com/bookCount`
         fetch(url)
             .then(res => res.json())
             .then(data => {

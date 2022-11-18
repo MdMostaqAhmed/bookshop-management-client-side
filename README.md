@@ -1,10 +1,10 @@
 # BOOK SHOP Warehouse
 
-> [Live Website](https://www.github.com)
+> [Live Website](https://book-shop-fbf65.web.app/)
 
-> [Client site code](https://www.github.com)
+> [Client site code](https://github.com/MdMostaqAhmed/bookshop-management-client-side)
 
-> [Server site code](https://www.github.com)
+> [Server site code](https://github.com/MdMostaqAhmed/bookshop-management-server-side)
 
 ## This website made with
 

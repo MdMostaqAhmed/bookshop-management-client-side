@@ -6,7 +6,7 @@ import './Update.css'
 const Update = () => {
     const { id } = useParams()
     const [book, setBook] = useState({})
-    const url = `http://localhost:5000/book/${id}`
+    const url = ` https://stormy-journey-81086.herokuapp.com/book/${id}`
     useEffect(() => {
         fetch(url).then(res => res.json()).then(data => setBook(data))
     }, []);
@@ -22,7 +22,7 @@ const Update = () => {
         const sold = event.target.sold.value
         const book = { name, img, description, price, supplier, available, sold }
 
-        const url = `http://localhost:5000/book/${id}`;
+        const url = ` https://stormy-journey-81086.herokuapp.com/book/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {
