@@ -27,3 +27,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+.footer {
+  margin-top: 500px;
+}
