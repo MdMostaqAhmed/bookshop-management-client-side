@@ -6,7 +6,7 @@ const ManageItem = () => {
     const { id } = useParams()
     const [book, setBook] = useState({})
     const { name, price, supplier, available, sold } = book;
-    const url = ` https://stormy-journey-81086.herokuapp.com/book/${id}`
+    const url = `https://bookshop-management-server-side-production.up.railway.app/book/${id}`
     useEffect(() => {
         fetch(url).then(res => res.json()).then(data => setBook(data))
     }, [book]);
@@ -22,7 +22,7 @@ const ManageItem = () => {
         const available = newAvailable;
         const sold = newSold;
         const data = { available, sold }
-        const url = ` https://stormy-journey-81086.herokuapp.com/books/${id}`
+        const url = `https://bookshop-management-server-side-production.up.railway.app/books/${id}`
         axios.put(url, data).then(response => { console.log(response); })
 
     }
@@ -37,7 +37,7 @@ const ManageItem = () => {
             const available = newAvailable;
             const sold = newSold;
             const data = { available, sold }
-            const url = ` https://stormy-journey-81086.herokuapp.com/books/${id}`
+            const url = `https://bookshop-management-server-side-production.up.railway.app/books/${id}`
             axios.put(url, data).then(response => { console.log(response); })
         }
     }

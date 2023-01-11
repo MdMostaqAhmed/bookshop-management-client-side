@@ -12,13 +12,16 @@ const MyItems = () => {
     useEffect(() => {
         const getItems = async () => {
             const email = user.email;
-            const url = ` https://stormy-journey-81086.herokuapp.com/myItem?email=${email}`
+            // console.log(email)
+            const url = `https://bookshop-management-server-side-production.up.railway.app/myItem?email=${email}`
+
             const { data } = await axios.get(url, {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem('accessToken')}`
                 }
             })
             setItems(data);
+            console.log(data);
         }
         getItems();
     }, [user])
@@ -28,7 +31,8 @@ const MyItems = () => {
         if (proceed) {
             console.log(id)
             toast("Item Deleted")
-            const url = ` https://stormy-journey-81086.herokuapp.com/myItem/${id}`
+            // const url = `https://bookshop-management-server-side-production.up.railway.app/myItem/${id}`
+            const url = `http://localhost:5000/myItem/${id}`
             fetch(url, {
                 method: "DELETE"
             })

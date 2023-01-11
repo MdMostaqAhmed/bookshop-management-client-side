@@ -5,7 +5,7 @@ import Loading from '../Loading/Loading';
 const LimitedProducts = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        const url = ' https://stormy-journey-81086.herokuapp.com/limitedBooks';
+        const url = 'https://bookshop-management-server-side-production.up.railway.app/limitedBooks';
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data))

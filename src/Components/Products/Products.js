@@ -8,14 +8,17 @@ const Products = () => {
     const [page, setPage] = useState(0);
     const [size, setSize] = useState(6);
     useEffect(() => {
-        const url = ` https://stormy-journey-81086.herokuapp.com/books?page=${page}&size=${size}`;
+        const url = `https://bookshop-management-server-side-production.up.railway.app/books?page=${page}&size=${size}`;
         fetch(url)
             .then(res => res.json())
-            .then(data => setItems(data))
+            .then(data => {
+                setItems(data)
+
+            })
     }, [page, size])
 
     useEffect(() => {
-        const url = ` https://stormy-journey-81086.herokuapp.com/bookCount`
+        const url = `https://bookshop-management-server-side-production.up.railway.app/bookCount`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -51,8 +54,8 @@ const Products = () => {
                             <span><strong>Sold: {item.sold}</strong></span> <br />
                             <hr></hr>
                             <div className='d-flex justify-content-around mb-1'>
-                                <Link to={`/updateBook/${item._id}`}><button className='btn btn-primary'>Update</button></Link>
-                                <Link to={`/manageItem/${item._id}`}><button className='btn btn-primary'>Manage</button></Link>
+                                <Link to={`updateBook/${item._id}`}><button className='btn btn-primary'>Update</button></Link>
+                                <Link to={`manageItem/${item._id}`}><button className='btn btn-primary'>Manage</button></Link>
                             </div>
                         </div>
                     </div>)

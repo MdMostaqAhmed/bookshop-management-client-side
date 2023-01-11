@@ -5,7 +5,7 @@ import './UpdateProduct.css'
 const UpdateProduct = () => {
     const [items, setItems] = useState([]);
     useEffect(() => {
-        const url = ' https://stormy-journey-81086.herokuapp.com/books';
+        const url = 'https://bookshop-management-server-side-production.up.railway.app/books';
         fetch(url)
             .then(res => res.json())
             .then(data => setItems(data))
@@ -15,7 +15,7 @@ const UpdateProduct = () => {
         const proceed = window.confirm("Are sure to Delete the Item");
         if (proceed) {
             console.log(id)
-            const url = ` https://stormy-journey-81086.herokuapp.com/book/${id}`
+            const url = `https://bookshop-management-server-side-production.up.railway.app/book/${id}`
             fetch(url, {
                 method: "DELETE"
             })

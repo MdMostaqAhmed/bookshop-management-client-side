@@ -5,12 +5,16 @@ import auth from '../../firebase.init';
 import google from '../../images/social/google.png';
 import facebook from '../../images/social/facebook.png';
 import github from '../../images/social/gihub.png';
+import Loading from '../Loading/Loading';
+
 
 
 const SocialLogin = () => {
+
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithGithub, user1, loading1, error1] = useSignInWithGithub(auth);
     const [signInWithFacebook, user2, loading2, error2] = useSignInWithFacebook(auth);
+
 
     let errorElement;
 
@@ -22,6 +26,12 @@ const SocialLogin = () => {
     if (user || user1 || user2) {
         navigate("/home")
     }
+
+    if (loading || loading1 || loading2) {
+        <Loading></Loading>
+    }
+
+
     return (
         <div className='container'>
 
