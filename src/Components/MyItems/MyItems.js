@@ -31,8 +31,8 @@ const MyItems = () => {
         if (proceed) {
             console.log(id)
             toast("Item Deleted")
-            // const url = `https://bookshop-management-server-side-production.up.railway.app/myItem/${id}`
-            const url = `http://localhost:5000/myItem/${id}`
+            const url = `https://bookshop-management-server-side-production.up.railway.app/myItem/${id}`
+            // const url = `http://localhost:5000/myItem/${id}`
             fetch(url, {
                 method: "DELETE"
             })

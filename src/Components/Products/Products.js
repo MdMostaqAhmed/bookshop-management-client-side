@@ -54,8 +54,8 @@ const Products = () => {
                             <span><strong>Sold: {item.sold}</strong></span> <br />
                             <hr></hr>
                             <div className='d-flex justify-content-around mb-1'>
-                                <Link to={`updateBook/${item._id}`}><button className='btn btn-primary'>Update</button></Link>
-                                <Link to={`manageItem/${item._id}`}><button className='btn btn-primary'>Manage</button></Link>
+                                <Link to={`/updateBook/${item._id}`}><button className='btn btn-primary'>Update</button></Link>
+                                <Link to={`/manageItem/${item._id}`}><button className='btn btn-primary'>Manage</button></Link>
                             </div>
                         </div>
                     </div>)
